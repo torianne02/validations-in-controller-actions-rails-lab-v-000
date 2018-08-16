@@ -8,7 +8,13 @@ class PostsController < ApplicationController
   end
 
   def update
+<<<<<<< HEAD
     if @post.update(post_params)
+=======
+    if @post.valid?
+      @post.update(post_params)
+
+>>>>>>> 75683d814d900fb1a06ca9c258c8c3f2dcc8addf
       redirect_to post_path(@post)
     else
       render :edit
